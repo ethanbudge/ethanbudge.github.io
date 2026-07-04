@@ -1,0 +1,10 @@
+# Top nav links, in display order. Edit this file to add/remove/reorder --
+# nothing in the layouts needs to change.
+- title: Academic Research
+  url: /academic-research/
+- title: Personal Research
+  url: /personal-research/
+- title: Datasets
+  url: /datasets/
+- title: About
+  url: /about/
