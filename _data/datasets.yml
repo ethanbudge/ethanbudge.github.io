@@ -1,0 +1,33 @@
+# Dataset catalog. Add an entry here to list a new dataset -- no template
+# edits needed. `download_url` can point to a GitHub release asset, a Google
+# Drive link, or (for commercial datasets) your paywall/checkout link.
+#
+# academic:
+#   - title: Example Academic Dataset
+#     description: One or two sentences describing what's in it and why it's useful.
+#     format: CSV
+#     size: "12 MB"
+#     download_url: "#" # replace with a real link when the dataset is ready
+#
+# commercial:
+#   - title: Example Commercial Dataset
+#     description: One or two sentences describing what's in it and who it's for.
+#     format: CSV / JSON
+#     size: "500 MB"
+#     price: "$49"
+#     checkout_url: "#" # replace with your Gumroad/Payhip/Stripe link
+
+academic:
+  - title: "Placeholder: Academic Dataset One"
+    description: "Replace with a real description once this dataset is ready to share."
+    format: "CSV"
+    size: "TBD"
+    download_url: "#"
+
+commercial:
+  - title: "Placeholder: Commercial Dataset One"
+    description: "Replace with a real description once this dataset is ready to sell."
+    format: "CSV / JSON"
+    size: "TBD"
+    price: "TBD"
+    checkout_url: "#"
