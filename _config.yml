@@ -26,10 +26,6 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
-  - jekyll-paginate
-
-paginate: 10
-paginate_path: "/page:num/"
 
 sass:
   sass_dir: _sass
@@ -71,4 +67,3 @@ exclude:
   - README.md
   - vendor
   - node_modules
-  - HANDOFF.md
