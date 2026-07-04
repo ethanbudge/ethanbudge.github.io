@@ -1,0 +1,27 @@
+// Everything you'd want to retheme lives here. Change a value, rebuild --
+// nothing else in the stylesheets needs to change.
+
+// Colors
+$color-bg:        #ffffff;
+$color-bg-alt:     #fafafa;
+$color-text:       #1a1a1a;
+$color-text-muted: #666666;
+$color-border:     #e8e8e8;
+$color-accent:     #2757d6;
+$color-accent-alt: #14306b;
+
+// Type
+$font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+$font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+$font-size-base: 18px;
+$line-height-base: 1.65;
+
+// Layout
+$content-width: 700px;
+$page-width: 1000px;
+$sidebar-width: 220px;
+$gutter: 2rem;
+
+// Motion
+$transition-fast: 0.15s ease;

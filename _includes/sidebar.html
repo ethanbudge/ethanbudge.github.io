@@ -1,0 +1,22 @@
+<aside class="page-shell__sidebar" aria-label="Sidebar">
+  <div class="sidebar-block">
+    <div class="sidebar-block__title">Sections</div>
+    <ul class="sidebar-block__list">
+      {% for item in site.data.navigation %}
+      <li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  {% assign recent = site.academic_research | concat: site.personal_research | sort: "date" | reverse %}
+  {% if recent.size > 0 %}
+  <div class="sidebar-block">
+    <div class="sidebar-block__title">Recent posts</div>
+    <ul class="sidebar-block__list">
+      {% for post in recent limit: 5 %}
+      <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+</aside>

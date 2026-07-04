@@ -1,0 +1,34 @@
+---
+layout: default
+---
+<div class="page-shell page-shell--narrow">
+  <div class="hero">
+    <h1>{{ site.title }}</h1>
+    <p class="hero__tagline">{{ site.tagline }}</p>
+  </div>
+
+  {{ content }}
+
+  <div class="section-grid">
+    {% for item in site.data.navigation %}
+    <a class="section-card" href="{{ item.url | relative_url }}">
+      <div class="section-card__title">{{ item.title }}</div>
+    </a>
+    {% endfor %}
+  </div>
+
+  {% assign recent = site.academic_research | concat: site.personal_research | sort: "date" | reverse %}
+  {% if recent.size > 0 %}
+  <h2>Recent posts</h2>
+  <ul class="post-list">
+    {% for post in recent limit: 8 %}
+    <li class="post-list__item">
+      <div class="post-header__section">{{ post.section_title }}</div>
+      <h3 class="post-list__title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+      <div class="post-list__meta">{{ post.date | date: "%B %-d, %Y" }}</div>
+      {% if post.excerpt %}<p class="post-list__excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>{% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+</div>

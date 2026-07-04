@@ -1,0 +1,341 @@
+// -- Site chrome -----------------------------------------------------------
+
+.site-header {
+  border-bottom: 1px solid $color-border;
+  padding: 1.5rem $gutter;
+}
+
+.site-header__inner {
+  max-width: $page-width;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem 2rem;
+}
+
+.site-header__title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: $color-text;
+
+  &:hover {
+    text-decoration: none;
+    color: $color-accent;
+  }
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  a {
+    color: $color-text-muted;
+
+    &:hover, &.is-active {
+      color: $color-accent;
+      text-decoration: none;
+    }
+  }
+}
+
+.site-footer {
+  border-top: 1px solid $color-border;
+  margin-top: 4rem;
+  padding: 2rem $gutter;
+  color: $color-text-muted;
+  font-size: 0.9rem;
+
+  .site-footer__inner {
+    max-width: $page-width;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.75rem;
+  }
+
+  a {
+    color: $color-text-muted;
+
+    &:hover {
+      color: $color-accent;
+    }
+  }
+}
+
+// -- Page shells -------------------------------------------------------
+
+.page-shell {
+  max-width: $page-width;
+  margin: 0 auto;
+  padding: 3rem $gutter;
+}
+
+.page-shell--with-sidebar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $gutter * 1.5;
+  align-items: flex-start;
+}
+
+.page-shell__main {
+  flex: 1 1 $content-width;
+  min-width: 0;
+}
+
+.page-shell__sidebar {
+  flex: 0 0 $sidebar-width;
+}
+
+.page-shell--narrow {
+  max-width: $content-width;
+}
+
+// -- Post list (blog index) --------------------------------------------
+
+.post-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.post-list__item {
+  padding: 1.25rem 0;
+  border-bottom: 1px solid $color-border;
+
+  &:first-child {
+    padding-top: 0;
+  }
+}
+
+.post-list__title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 0.25rem;
+}
+
+.post-list__meta {
+  color: $color-text-muted;
+  font-size: 0.85rem;
+}
+
+.post-list__excerpt {
+  margin: 0.5rem 0 0;
+  color: $color-text-muted;
+}
+
+// -- Sidebar: category list, à la amitness.com --------------------------
+
+.sidebar-block {
+  margin-bottom: 2rem;
+}
+
+.sidebar-block__title {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: $color-text-muted;
+  margin-bottom: 0.75rem;
+}
+
+.sidebar-block__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    margin-bottom: 0.4rem;
+  }
+}
+
+// -- Single post/page -----------------------------------------------------
+
+.post-header {
+  margin-bottom: 2rem;
+}
+
+.post-header__meta {
+  color: $color-text-muted;
+  font-size: 0.9rem;
+}
+
+.post-header__section {
+  display: inline-block;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: $color-accent;
+  margin-bottom: 0.5rem;
+}
+
+// -- Home page hero -------------------------------------------------------
+
+.hero {
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid $color-border;
+}
+
+.hero__tagline {
+  color: $color-text-muted;
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+}
+
+.section-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.section-card {
+  border: 1px solid $color-border;
+  border-radius: 8px;
+  padding: 1.25rem;
+  transition: border-color $transition-fast;
+
+  &:hover {
+    border-color: $color-accent;
+    text-decoration: none;
+  }
+}
+
+.section-card__title {
+  font-weight: 700;
+  color: $color-text;
+  margin-bottom: 0.35rem;
+}
+
+.section-card__desc {
+  color: $color-text-muted;
+  font-size: 0.9rem;
+}
+
+// -- About page -------------------------------------------------------
+
+.about-header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.about-header__photo {
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  border: 1px solid $color-border;
+  object-fit: cover;
+}
+
+.about-links {
+  list-style: none;
+  margin: 1.5rem 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.about-links a {
+  display: inline-block;
+  border: 1px solid $color-border;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  color: $color-text;
+
+  &:hover {
+    border-color: $color-accent;
+    color: $color-accent;
+    text-decoration: none;
+  }
+}
+
+// -- Datasets ---------------------------------------------------------
+
+.dataset-list {
+  list-style: none;
+  margin: 0 0 2rem;
+  padding: 0;
+}
+
+.dataset-card {
+  border: 1px solid $color-border;
+  border-radius: 8px;
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.dataset-card__info {
+  flex: 1 1 300px;
+}
+
+.dataset-card__title {
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.dataset-card__meta {
+  color: $color-text-muted;
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+}
+
+.dataset-card__action {
+  flex: 0 0 auto;
+  align-self: center;
+}
+
+.btn {
+  display: inline-block;
+  border-radius: 6px;
+  padding: 0.5rem 1.1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: 1px solid $color-accent;
+  color: $color-accent;
+
+  &:hover {
+    background: $color-accent;
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+.btn--locked {
+  border-color: $color-border;
+  color: $color-text-muted;
+
+  &:hover {
+    background: none;
+    color: $color-text-muted;
+    cursor: not-allowed;
+  }
+}
+
+.callout {
+  background: $color-bg-alt;
+  border-left: 3px solid $color-accent;
+  border-radius: 4px;
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 640px) {
+  .page-shell {
+    padding: 2rem 1.25rem;
+  }
+}

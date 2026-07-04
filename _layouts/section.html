@@ -1,0 +1,25 @@
+---
+layout: default
+---
+<div class="page-shell page-shell--with-sidebar">
+  <div class="page-shell__main">
+    <h1>{{ page.title }}</h1>
+    {{ content }}
+
+    {% assign posts = site[page.collection] | sort: "date" | reverse %}
+    {% if posts.size > 0 %}
+    <ul class="post-list">
+      {% for post in posts %}
+      <li class="post-list__item">
+        <h2 class="post-list__title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+        <div class="post-list__meta">{{ post.date | date: "%B %-d, %Y" }}</div>
+        {% if post.excerpt %}<p class="post-list__excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>{% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p class="post-list__meta">No posts yet -- see <a href="https://github.com/{{ site.author.github }}/{{ site.author.github }}.github.io/blob/main/README.md">README.md</a> for how to add the first one.</p>
+    {% endif %}
+  </div>
+  {% include sidebar.html %}
+</div>
