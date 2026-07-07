@@ -1,3 +1,69 @@
-theme: jekyll-theme-minimal
-title: Ethan Budge's Resume and Blog
-description: A home for all of Ethan's work, projects, and media recommendations.
+# Site settings -- change these first, they show up everywhere.
+title: Ethan Budge
+tagline: Academic & personal research, datasets, and occasional writing.
+description: >-
+  Personal site and blog for Ethan Budge: academic research notes, personal
+  research on lighter topics, and downloadable datasets.
+url: "https://ethanbudge.github.io"
+baseurl: ""
+
+author:
+  name: Ethan Budge
+  github: ethanbudge
+  # Add your academic homepage once you have one to link, e.g.:
+  # academic_url: "https://scholar.example.edu/~ethanbudge"
+
+# Do not publish until the owner has reviewed the site (see issue #3 / README).
+# Nothing here disables Pages itself -- that's a repo-settings switch the
+# owner flips manually when ready.
+
+# -- Build settings -----------------------------------------------------
+markdown: kramdown
+highlighter: rouge
+permalink: /:collection/:year/:month/:day/:title/
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+collections:
+  academic_research:
+    output: true
+    permalink: /academic-research/:year/:month/:day/:title/
+  personal_research:
+    output: true
+    permalink: /personal-research/:year/:month/:day/:title/
+
+defaults:
+  - scope:
+      path: ""
+      type: "academic_research"
+    values:
+      layout: post
+      section: academic-research
+      section_title: "Academic Research"
+  - scope:
+      path: ""
+      type: "personal_research"
+    values:
+      layout: post
+      section: personal-research
+      section_title: "Personal Research"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: page
+
+# -- Housekeeping ---------------------------------------------------------
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
+  - node_modules
